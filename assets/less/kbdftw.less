@@ -1,0 +1,60 @@
+/*
+WebKit Defaults:
+----------------------
+display: inline;
+font-family: monospace;
+height: auto;
+width: auto;
+
+Apple Keyboard font: VAG Rounded
+*/
+
+/*  Le variables
+---------------------- */
+
+@textColor: 		#444;
+@textColorDark: 	#eee;
+
+@fontFamily: 		"Lucida Grande", Lucida, Verdana, sans-serif;
+
+kbd {
+	color: @textColor;
+	font-family: @fontFamily;
+	font-weight: normal;
+	font-style: normal;
+	text-align: center;
+	text-shadow: 0 1px 0 #fff;
+	
+	display: inline;
+	padding: .3em .55em;
+	
+	border-radius: 6px;
+	border: 1px solid #bbb;
+	
+	background-color: #f7f7f7;
+	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 60%,rgba(0,0,0,0) 100%);
+	
+	box-shadow: 0px 2px 0 #ccc,
+				0 3px 1px #999,
+				0 4px 0 #fff,
+				inset 0 1px 0 #fff;
+	
+	&.dark {
+		color: @textColorDark;
+		text-shadow: 0 -1px 0 #000;
+		
+		border-color: #444;
+		border-bottom-color: #000;
+		
+		background-color: #4d4c4c;
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,.5) 0%,rgba(0,0,0,0) 80%,rgba(0,0,0,0) 100%);
+		
+		box-shadow: 0px 2px 0 #222,
+					0 3px 1px #999,
+					0 4px 0 #ccc,
+					inset 0 1px 0 #aaa;
+		
+	}
+		
+}
+
