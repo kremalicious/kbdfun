@@ -267,6 +267,10 @@ article > section#keysandroid code {
 .navbar p a.github {
   float: right;
 }
+kbd {
+  display: inline-block;
+  margin-bottom: .5em;
+}
 kbd.android {
   font-family: RobotoRegular, sans-serif;
   font-weight: normal;
