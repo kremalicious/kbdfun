@@ -47,7 +47,7 @@ a:hover {
 	margin-right: auto;
 	padding-left: 1.5em;
 	padding-right: 1.5em;
-	max-width: 55.6em;
+	max-width: 40em;
 }
 
 // import kbd styles
@@ -59,8 +59,18 @@ a:hover {
 
 code {
 	display: block;
-	color: #666;
+	color: #ccc;
 	font-size: .8em;
+	text-align: left;
+}
+
+body > header {
+	.container;
+	text-align: left;
+}
+
+body > footer {
+	padding: 2em 0;
 }
 
 article > section {
@@ -71,9 +81,13 @@ article > section {
 		margin-bottom: 1.5em;
 		&:last-child { margin-bottom: 0 }
 	}
-	h2 {
+	header {
 		.container;
-		color: #ccc;
+		text-align: left;
+		h2 {
+			color: #ccc;
+			
+		}
 	}
 	
 	&#keysdefault {
@@ -81,6 +95,7 @@ article > section {
 	}
 	
 	&#keysdark {
+		background: #999;
 		border-top: 1px solid #fff;
 		box-shadow: 0 -1px 0 #ccc;
 	}
@@ -90,7 +105,7 @@ article > section {
 		border-top: 1px solid #c0becf;
 		box-shadow: 0 -1px 0 #9b9aa5;
 		
-		h2 { color: #696972; }
+		h2, code { color: #696972; }
 	}
 	
 	&#keysandroid {
@@ -98,7 +113,7 @@ article > section {
 		border-top: 1px solid #505050;
 		box-shadow: 0 -1px 0 #000;
 		
-		h2 { color: #2e2d2e; }
+		h2, code { color: #2e2d2e; }
 	}
 }
 

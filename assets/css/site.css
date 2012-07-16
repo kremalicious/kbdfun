@@ -53,7 +53,7 @@ a:hover {
   margin-right: auto;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  max-width: 55.6em;
+  max-width: 40em;
 }
 /*
 WebKit Defaults:
@@ -140,11 +140,11 @@ kbd.android {
 }
 kbd.android.dark {
   background: #222222;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 1px 0 #444444, inset 0 1px 0 #505050;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.7), 0 1px 0 #444444, inset 0 1px 0 #505050;
 }
 kbd.android.color {
   background: #083c5b;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 1px 0 #444444, inset 0 1px 0 #36647b;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.7), 0 1px 0 #444444, inset 0 1px 0 #36647b;
 }
 @font-face {
   font-family: 'RobotoRegular';
@@ -157,8 +157,20 @@ kbd.android.color {
    -------------------------------------------------- */
 code {
   display: block;
-  color: #666;
+  color: #ccc;
   font-size: .8em;
+  text-align: left;
+}
+body > header {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  max-width: 40em;
+  text-align: left;
+}
+body > footer {
+  padding: 2em 0;
 }
 article > section {
   padding: 2em 0 3.5em 0;
@@ -168,21 +180,25 @@ article > section p {
   margin-right: auto;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  max-width: 55.6em;
+  max-width: 40em;
   margin-bottom: 1.5em;
 }
 article > section p:last-child {
   margin-bottom: 0;
 }
-article > section h2 {
+article > section header {
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  max-width: 55.6em;
+  max-width: 40em;
+  text-align: left;
+}
+article > section header h2 {
   color: #ccc;
 }
 article > section#keysdark {
+  background: #999;
   border-top: 1px solid #fff;
   box-shadow: 0 -1px 0 #cccccc;
 }
@@ -197,7 +213,8 @@ article > section#keysios {
   border-top: 1px solid #c0becf;
   box-shadow: 0 -1px 0 #9b9aa5;
 }
-article > section#keysios h2 {
+article > section#keysios h2,
+article > section#keysios code {
   color: #696972;
 }
 article > section#keysandroid {
@@ -205,7 +222,8 @@ article > section#keysandroid {
   border-top: 1px solid #505050;
   box-shadow: 0 -1px 0 #000000;
 }
-article > section#keysandroid h2 {
+article > section#keysandroid h2,
+article > section#keysandroid code {
   color: #2e2d2e;
 }
 .navbar {
@@ -225,7 +243,7 @@ article > section#keysandroid h2 {
   margin-right: auto;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  max-width: 55.6em;
+  max-width: 40em;
   text-align: left;
   margin: 0;
   font-size: 16px;
