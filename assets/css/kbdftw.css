@@ -8,8 +8,6 @@ width: auto;
 
 Apple Keyboard font: VAG Rounded
 */
-/*  Le variables
----------------------- */
 /*  Le kbd
 ---------------------- */
 kbd {
@@ -56,8 +54,8 @@ kbd.dark {
 kbd.ios {
   font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
   color: #000;
-  border-color: rgba(0, 0, 0, 0.4);
-  border-top-color: #7c7b84;
+  border-color: rgba(0, 0, 0, 0.6);
+  border-top-color: rgba(0, 0, 0, 0.4);
   background-color: ##b7b7bc;
   background-image: -moz-linear-gradient(top, #efeff0, #b7b7bc);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#efeff0), to(#b7b7bc));
@@ -69,19 +67,14 @@ kbd.ios {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6), 0 2px 3px rgba(0, 0, 0, 0.1), inset 0 1px 0 #ffffff;
 }
 kbd.android {
-  /* 
-			  Uncomment this to load Roboto.
-			  Make sure to include the font files
-			  somewhere in your project structure.
-			*/
-
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #ffffff;
   text-shadow: none;
   padding: .3em;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
@@ -95,14 +88,6 @@ kbd.android.dark {
 kbd.android.color {
   background: #083c5b;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 1px 0 #444444, inset 0 1px 0 #36647b;
-}
-/*  Mixins
----------------------- */
-.font-roboto {
-  font-family: RobotoRegular, "Helvetica Neue", Arial, sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  padding: .3em .3em .2em .3em;
 }
 @font-face {
   font-family: 'RobotoRegular';

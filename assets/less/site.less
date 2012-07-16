@@ -1,11 +1,126 @@
+// HTML5 display definitions
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+/* Basics 
+   -------------------------------------------------- */
+   
 body {
 	background: #eee;
 	font: 24px/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: center;
+	margin: 0;
+	padding-top: 1em;
 }
 
+h1, h2 {
+	
+}
 
+a,
+a:visited {
+	text-decoration: none;
+	color: #6ec7e5;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+a:hover {
+	color: #72d2f1;
+}
+
+// Box sizing
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+// Grid container
+.container { 
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	max-width: 55.6em;
+}
+
+// import kbd styles
 @import 'kbdftw.less';
 
+
+/* Content 
+   -------------------------------------------------- */
+
+code {
+	display: block;
+	color: #666;
+	font-size: .8em;
+}
+
+article > section {
+	padding: 2em 0 3.5em 0;
+	
+	p {
+		.container;
+		margin-bottom: 1.5em;
+		&:last-child { margin-bottom: 0 }
+	}
+	h2 {
+		.container;
+		color: #ccc;
+	}
+	
+	&#keysdefault {
+		
+	}
+	
+	&#keysdark {
+		border-top: 1px solid #fff;
+		box-shadow: 0 -1px 0 #ccc;
+	}
+	
+	&#keysios {
+		#gradient > .vertical(#9c9ba6, #43444b);
+		border-top: 1px solid #c0becf;
+		box-shadow: 0 -1px 0 #9b9aa5;
+		
+		h2 { color: #696972; }
+	}
+	
+	&#keysandroid {
+		background: #181818;
+		border-top: 1px solid #505050;
+		box-shadow: 0 -1px 0 #000;
+		
+		h2 { color: #2e2d2e; }
+	}
+}
+
+.navbar {
+	background: #eee;
+	background: rgba(238, 238, 238, .9);
+	.box-shadow(0 1px 3px rgba(0,0,0,.1));
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	padding: 0 1em;
+}
+
+.navbar p {
+	.container;
+	text-align: left;
+	margin: 0;
+	font-size: 16px;
+}
+
+// load Roboto
 kbd.android {
 	.font-roboto;
 }

@@ -1,6 +1,59 @@
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+/* Basics 
+   -------------------------------------------------- */
 body {
   background: #eee;
   font: 24px/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding-top: 1em;
+}
+a,
+a:visited {
+  text-decoration: none;
+  color: #6ec7e5;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+a:hover {
+  color: #72d2f1;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  max-width: 55.6em;
 }
 /*
 WebKit Defaults:
@@ -12,8 +65,6 @@ width: auto;
 
 Apple Keyboard font: VAG Rounded
 */
-/*  Le variables
----------------------- */
 /*  Le kbd
 ---------------------- */
 kbd {
@@ -60,8 +111,8 @@ kbd.dark {
 kbd.ios {
   font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
   color: #000;
-  border-color: rgba(0, 0, 0, 0.4);
-  border-top-color: #7c7b84;
+  border-color: rgba(0, 0, 0, 0.6);
+  border-top-color: rgba(0, 0, 0, 0.4);
   background-color: ##b7b7bc;
   background-image: -moz-linear-gradient(top, #efeff0, #b7b7bc);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#efeff0), to(#b7b7bc));
@@ -73,19 +124,14 @@ kbd.ios {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6), 0 2px 3px rgba(0, 0, 0, 0.1), inset 0 1px 0 #ffffff;
 }
 kbd.android {
-  /* 
-			  Uncomment this to load Roboto.
-			  Make sure to include the font files
-			  somewhere in your project structure.
-			*/
-
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #ffffff;
   text-shadow: none;
   padding: .3em;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
@@ -100,14 +146,6 @@ kbd.android.color {
   background: #083c5b;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 1px 0 #444444, inset 0 1px 0 #36647b;
 }
-/*  Mixins
----------------------- */
-.font-roboto {
-  font-family: RobotoRegular, "Helvetica Neue", Arial, sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  padding: .3em .3em .2em .3em;
-}
 @font-face {
   font-family: 'RobotoRegular';
   src: url('../fonts/Roboto-Regular-webfont.eot');
@@ -115,9 +153,91 @@ kbd.android.color {
   font-weight: normal;
   font-style: normal;
 }
+/* Content 
+   -------------------------------------------------- */
+code {
+  display: block;
+  color: #666;
+  font-size: .8em;
+}
+article > section {
+  padding: 2em 0 3.5em 0;
+}
+article > section p {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  max-width: 55.6em;
+  margin-bottom: 1.5em;
+}
+article > section p:last-child {
+  margin-bottom: 0;
+}
+article > section h2 {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  max-width: 55.6em;
+  color: #ccc;
+}
+article > section#keysdark {
+  border-top: 1px solid #fff;
+  box-shadow: 0 -1px 0 #cccccc;
+}
+article > section#keysios {
+  background-image: -moz-linear-gradient(top, #9c9ba6, #43444b);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#9c9ba6), to(#43444b));
+  background-image: -webkit-linear-gradient(top, #9c9ba6, #43444b);
+  background-image: -o-linear-gradient(top, #9c9ba6, #43444b);
+  background-image: linear-gradient(top, #9c9ba6, #43444b);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff9c9ba6', endColorstr='#ff43444b', GradientType=0);
+  border-top: 1px solid #c0becf;
+  box-shadow: 0 -1px 0 #9b9aa5;
+}
+article > section#keysios h2 {
+  color: #696972;
+}
+article > section#keysandroid {
+  background: #181818;
+  border-top: 1px solid #505050;
+  box-shadow: 0 -1px 0 #000000;
+}
+article > section#keysandroid h2 {
+  color: #2e2d2e;
+}
+.navbar {
+  background: #eee;
+  background: rgba(238, 238, 238, 0.9);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 0 1em;
+}
+.navbar p {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  max-width: 55.6em;
+  text-align: left;
+  margin: 0;
+  font-size: 16px;
+}
 kbd.android {
-  font-family: RobotoRegular, "Helvetica Neue", Arial, sans-serif;
+  font-family: RobotoRegular, sans-serif;
   font-weight: normal;
   font-style: normal;
+  /*
+	  The font files are a bit weirdly aligned,
+	  this centers the glyphs on the buttons again
+	*/
+
   padding: .3em .3em .2em .3em;
 }

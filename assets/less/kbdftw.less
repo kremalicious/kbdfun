@@ -9,8 +9,8 @@ width: auto;
 Apple Keyboard font: VAG Rounded
 */
 
-/*  Le variables
----------------------- */
+// Le variables
+// ----------------------
 
 @textColor: 		#444;
 @textColorDark: 	#eee;
@@ -59,55 +59,53 @@ kbd {
 					inset 0 -1px 3px #272727;
 	}
 
-	
-		&.ios {
-			font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
-			color: #000;
-			border-color: rgba(0,0,0,.4);
-			border-top-color: #7c7b84;			
-			
-			background-color: ##b7b7bc;
-			#gradient > .vertical(#efeff0, #b7b7bc);
-			
-			box-shadow: 0 1px 2px rgba(0,0,0,.6),
-						0 2px 3px rgba(0,0,0,.1),
-						inset 0 1px 0 #fff;
-		}
+	&.ios {
+		font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+		color: #000;
+		border-color: rgba(0,0,0,.6);
+		border-top-color: rgba(0,0,0,.4);			
+		
+		background-color: ##b7b7bc;
+		#gradient > .vertical(#efeff0, #b7b7bc);
+		
+		box-shadow: 0 1px 2px rgba(0,0,0,.6),
+					0 2px 3px rgba(0,0,0,.1),
+					inset 0 1px 0 #fff;
+	}
 
-		&.android {
-			/* 
-			  Uncomment this to load Roboto.
-			  Make sure to include the font files
-			  somewhere in your project structure.
-			*/
-			//.font-roboto;
-			color: #ffffff;
-			text-shadow: none;
-			padding: .3em;
-			border: 1px solid rgba(0,0,0,.05);
-			.border-radius(4px);
-			background: #5e5e5e;
+	&.android {
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	// Uncomment the following line to load Roboto.
+	// Make sure to include the font files
+	// somewhere in your project structure.
+		//.font-roboto;
+		color: #ffffff;
+		text-shadow: none;
+		padding: .3em;
+		border: 1px solid rgba(0,0,0,.05);
+		.border-radius(3px);
+		background: #5e5e5e;
+		box-shadow: 0 2px 2px rgba(0,0,0,.3),
+					0 1px 0 #444,
+					inset 0 1px 0 #868686;
+		&.dark 	  { 
+			background: #222222;
 			box-shadow: 0 2px 2px rgba(0,0,0,.3),
 						0 1px 0 #444,
-						inset 0 1px 0 #868686;
-			&.dark 	  { 
-				background: #222222;
-				box-shadow: 0 2px 2px rgba(0,0,0,.3),
-							0 1px 0 #444,
-							inset 0 1px 0 #505050;
-			}
-			&.color { 
-				background: #083c5b;
-				box-shadow: 0 2px 2px rgba(0,0,0,.3),
-							0 1px 0 #444,
-							inset 0 1px 0 #36647b;
-			}
+						inset 0 1px 0 #505050;
 		}
+		&.color { 
+			background: #083c5b;
+			box-shadow: 0 2px 2px rgba(0,0,0,.3),
+						0 1px 0 #444,
+						inset 0 1px 0 #36647b;
+		}
+	}
 }
 
 
-/*  Mixins
----------------------- */
+//  Mixins
+// ----------------------
 
 // Border Radius
 .border-radius(@radius) {
@@ -147,5 +145,5 @@ kbd {
 		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor)));
 	}
 }
-
+// import roboto styles
 @import 'roboto.less';
