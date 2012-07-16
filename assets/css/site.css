@@ -10,17 +10,6 @@ nav,
 section {
   display: block;
 }
-audio,
-canvas,
-video {
-  display: inline-block;
-}
-audio:not([controls]) {
-  display: none;
-}
-[hidden] {
-  display: none;
-}
 /* Basics 
    -------------------------------------------------- */
 body {
@@ -28,7 +17,15 @@ body {
   font: 24px/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
   text-align: center;
   margin: 0;
-  padding-top: 1em;
+  padding-top: 3em;
+  color: #ccc;
+}
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1.5em;
 }
 a,
 a:visited {
@@ -159,18 +156,30 @@ code {
   display: block;
   color: #ccc;
   font-size: .8em;
-  text-align: left;
 }
 body > header {
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  padding-bottom: 1em;
+}
+body > header h1,
+body > header p {
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.5em;
   padding-right: 1.5em;
   max-width: 40em;
-  text-align: left;
+}
+body > header h1 {
+  margin-bottom: .5em;
 }
 body > footer {
   padding: 2em 0;
+  font-size: .8em;
+}
+body > footer p {
+  margin-bottom: 0;
 }
 article > section {
   padding: 2em 0 3.5em 0;
@@ -181,7 +190,6 @@ article > section p {
   padding-left: 1.5em;
   padding-right: 1.5em;
   max-width: 40em;
-  margin-bottom: 1.5em;
 }
 article > section p:last-child {
   margin-bottom: 0;
@@ -192,7 +200,6 @@ article > section header {
   padding-left: 1.5em;
   padding-right: 1.5em;
   max-width: 40em;
-  text-align: left;
 }
 article > section header h2 {
   color: #ccc;
@@ -200,6 +207,8 @@ article > section header h2 {
 article > section#keysdark {
   background: #999;
   border-top: 1px solid #fff;
+  -webkit-box-shadow: 0 -1px 0 #cccccc;
+  -moz-box-shadow: 0 -1px 0 #cccccc;
   box-shadow: 0 -1px 0 #cccccc;
 }
 article > section#keysios {
@@ -211,6 +220,8 @@ article > section#keysios {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff9c9ba6', endColorstr='#ff43444b', GradientType=0);
   border-top: 1px solid #c0becf;
+  -webkit-box-shadow: 0 -1px 0 #9b9aa5;
+  -moz-box-shadow: 0 -1px 0 #9b9aa5;
   box-shadow: 0 -1px 0 #9b9aa5;
 }
 article > section#keysios h2,
@@ -220,6 +231,8 @@ article > section#keysios code {
 article > section#keysandroid {
   background: #181818;
   border-top: 1px solid #505050;
+  -webkit-box-shadow: 0 -1px 0 #000000;
+  -moz-box-shadow: 0 -1px 0 #000000;
   box-shadow: 0 -1px 0 #000000;
 }
 article > section#keysandroid h2,
@@ -236,17 +249,15 @@ article > section#keysandroid code {
   left: 0;
   top: 0;
   width: 100%;
-  padding: 0 1em;
+  padding: 0 1.5em;
 }
 .navbar p {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  max-width: 40em;
   text-align: left;
   margin: 0;
-  font-size: 16px;
+  font-size: 14px;
+}
+.navbar p a.github {
+  float: right;
 }
 kbd.android {
   font-family: RobotoRegular, sans-serif;

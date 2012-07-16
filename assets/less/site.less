@@ -1,8 +1,6 @@
 // HTML5 display definitions
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
-audio, canvas, video { display: inline-block; }
-audio:not([controls]) { display: none; }
-[hidden] { display: none; }
+
 
 /* Basics 
    -------------------------------------------------- */
@@ -12,11 +10,14 @@ body {
 	font: 24px/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-align: center;
 	margin: 0;
-	padding-top: 1em;
+	padding-top: 3em;
+	color: #ccc;
 }
 
-h1, h2 {
-	
+h1, h2, p {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 1.5em;
 }
 
 a,
@@ -51,7 +52,7 @@ a:hover {
 }
 
 // import kbd styles
-@import 'kbdftw.less';
+@import 'kbdfun.less';
 
 
 /* Content 
@@ -61,16 +62,22 @@ code {
 	display: block;
 	color: #ccc;
 	font-size: .8em;
-	text-align: left;
 }
 
 body > header {
-	.container;
-	text-align: left;
+	.box-shadow(0 3px 5px rgba(0,0,0,.1));
+	padding-bottom: 1em;
+	
+	h1, p {
+		.container;
+	}
+	h1 { margin-bottom: .5em; }
 }
 
 body > footer {
 	padding: 2em 0;
+	font-size: .8em;
+	p { margin-bottom: 0 }
 }
 
 article > section {
@@ -78,16 +85,11 @@ article > section {
 	
 	p {
 		.container;
-		margin-bottom: 1.5em;
 		&:last-child { margin-bottom: 0 }
 	}
 	header {
 		.container;
-		text-align: left;
-		h2 {
-			color: #ccc;
-			
-		}
+		h2 { color: #ccc; }
 	}
 	
 	&#keysdefault {
@@ -97,13 +99,13 @@ article > section {
 	&#keysdark {
 		background: #999;
 		border-top: 1px solid #fff;
-		box-shadow: 0 -1px 0 #ccc;
+		.box-shadow(0 -1px 0 #ccc);
 	}
 	
 	&#keysios {
 		#gradient > .vertical(#9c9ba6, #43444b);
 		border-top: 1px solid #c0becf;
-		box-shadow: 0 -1px 0 #9b9aa5;
+		.box-shadow(0 -1px 0 #9b9aa5);
 		
 		h2, code { color: #696972; }
 	}
@@ -111,7 +113,7 @@ article > section {
 	&#keysandroid {
 		background: #181818;
 		border-top: 1px solid #505050;
-		box-shadow: 0 -1px 0 #000;
+		.box-shadow(0 -1px 0 #000);
 		
 		h2, code { color: #2e2d2e; }
 	}
@@ -125,14 +127,14 @@ article > section {
 	left: 0;
 	top: 0;
 	width: 100%;
-	padding: 0 1em;
+	padding: 0 1.5em;
 }
 
 .navbar p {
-	.container;
 	text-align: left;
 	margin: 0;
-	font-size: 16px;
+	font-size: 14px;
+	a.github { float: right; }
 }
 
 // load Roboto
