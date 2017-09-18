@@ -20,95 +20,95 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 // Le variables
 // ----------------------
 
-@textColor: 		#444;
-@textColorDark: 	#eee;
-@fontFamily: 		"Lucida Grande", Lucida, Verdana, sans-serif;
+@textColor:     #444;
+@textColorDark:   #eee;
+@fontFamily:     "Lucida Grande", Lucida, Verdana, sans-serif;
 
 
 /*  Le kbd
 ---------------------- */
 
 kbd {
-	color: @textColor;
-	font-family: @fontFamily;
-	font-weight: normal;
-	font-style: normal;
-	text-align: center;
-	line-height: 1em;
-	text-shadow: 0 1px 0 #fff;
-	
-	display: inline;
-	padding: .3em .55em;
-	
-	.border-radius(6px);
-	border: 1px solid #bbb;
-	
-	background-color: #f7f7f7;
-	#gradient > .vertical(rgba(0,0,0,0.1), rgba(0,0,0,0));
-	
-	box-shadow: 0px 2px 0 #bbb,
-				0 3px 1px #999,
-				0 3px 0 #bbb,
-				inset 0 1px 1px #fff,
-				inset 0 -1px 3px #ccc;
-	
-	&.dark {
-		color: @textColorDark;
-		text-shadow: 0 -1px 0 #000;
-		
-		border-color: #000;
-		
-		background-color: #4d4c4c;
-		#gradient > .vertical-three-colors(rgba(0,0,0,0.5), rgba(0,0,0,0), 80%, rgba(0,0,0,0));
-		
-		box-shadow: 0px 2px 0 #000,
-					0 3px 1px #999,
-					inset 0 1px 1px #aaa,
-					inset 0 -1px 3px #272727;
-	}
+  color: @textColor;
+  font-family: @fontFamily;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  line-height: 1em;
+  text-shadow: 0 1px 0 #fff;
 
-	&.ios {
-		font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
-		color: #000;
-		border-color: rgba(0,0,0,.6);
-		border-top-color: rgba(0,0,0,.4);			
-		
-		background-color: #b7b7bc;
-		#gradient > .vertical(#efeff0, #b7b7bc);
-		
-		box-shadow: 0 1px 2px rgba(0,0,0,.6),
-					0 2px 3px rgba(0,0,0,.1),
-					inset 0 1px 0 #fff;
-	}
+  display: inline;
+  padding: .3em .55em;
 
-	&.android {
-		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	// Uncomment the following line to load Roboto.
-	// Make sure to include the font files
-	// somewhere in your project structure.
-		//.font-roboto;
-		color: #ffffff;
-		text-shadow: none;
-		padding: .3em;
-		border: 1px solid rgba(0,0,0,.05);
-		.border-radius(3px);
-		background: #5e5e5e;
-		box-shadow: 0 2px 2px rgba(0,0,0,.3),
-					0 1px 0 #444,
-					inset 0 1px 0 #868686;
-		&.dark 	  { 
-			background: #222222;
-			box-shadow: 0 2px 2px rgba(0,0,0,.7),
-						0 1px 0 #444,
-						inset 0 1px 0 #505050;
-		}
-		&.color { 
-			background: #083c5b;
-			box-shadow: 0 2px 2px rgba(0,0,0,.7),
-						0 1px 0 #444,
-						inset 0 1px 0 #36647b;
-		}
-	}
+  .border-radius(6px);
+  border: 1px solid #bbb;
+
+  background-color: #f7f7f7;
+  #gradient > .vertical(rgba(0,0,0,0.1), rgba(0,0,0,0));
+
+  box-shadow: 0px 2px 0 #bbb,
+        0 3px 1px #999,
+        0 3px 0 #bbb,
+        inset 0 1px 1px #fff,
+        inset 0 -1px 3px #ccc;
+
+  &.dark {
+    color: @textColorDark;
+    text-shadow: 0 -1px 0 #000;
+
+    border-color: #000;
+
+    background-color: #4d4c4c;
+    #gradient > .vertical-three-colors(rgba(0,0,0,0.5), rgba(0,0,0,0), 80%, rgba(0,0,0,0));
+
+    box-shadow: 0px 2px 0 #000,
+          0 3px 1px #999,
+          inset 0 1px 1px #aaa,
+          inset 0 -1px 3px #272727;
+  }
+
+  &.ios {
+    font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+    color: #000;
+    border-color: rgba(0,0,0,.6);
+    border-top-color: rgba(0,0,0,.4);
+
+    background-color: #b7b7bc;
+    #gradient > .vertical(#efeff0, #b7b7bc);
+
+    box-shadow: 0 1px 2px rgba(0,0,0,.6),
+          0 2px 3px rgba(0,0,0,.1),
+          inset 0 1px 0 #fff;
+  }
+
+  &.android {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  // Uncomment the following line to load Roboto.
+  // Make sure to include the font files
+  // somewhere in your project structure.
+    //.font-roboto;
+    color: #ffffff;
+    text-shadow: none;
+    padding: .3em;
+    border: 1px solid rgba(0,0,0,.05);
+    .border-radius(3px);
+    background: #5e5e5e;
+    box-shadow: 0 2px 2px rgba(0,0,0,.3),
+          0 1px 0 #444,
+          inset 0 1px 0 #868686;
+    &.dark     {
+      background: #222222;
+      box-shadow: 0 2px 2px rgba(0,0,0,.7),
+            0 1px 0 #444,
+            inset 0 1px 0 #505050;
+    }
+    &.color {
+      background: #083c5b;
+      box-shadow: 0 2px 2px rgba(0,0,0,.7),
+            0 1px 0 #444,
+            inset 0 1px 0 #36647b;
+    }
+  }
 }
 
 
@@ -134,24 +134,24 @@ kbd {
 
 // Gradient
 #gradient {
-	.vertical(@startColor, @endColor) {
-		background-image: -moz-linear-gradient(top, @startColor, @endColor);
-		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor));
-		background-image: -webkit-linear-gradient(top, @startColor, @endColor);
-		background-image: -o-linear-gradient(top, @startColor, @endColor);
-		background-image: linear-gradient(top, @startColor, @endColor);
-		background-repeat: repeat-x;
-		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor)));
-	}
-	.vertical-three-colors(@startColor, @midColor, @colorStop, @endColor) {
-		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), color-stop(@colorStop, @midColor), to(@endColor));
-		background-image: -webkit-linear-gradient(@startColor, @midColor @colorStop, @endColor);
-		background-image: -moz-linear-gradient(top, @startColor, @midColor @colorStop, @endColor);
-		background-image: -o-linear-gradient(@startColor, @midColor @colorStop, @endColor);
-		background-image: linear-gradient(@startColor, @midColor @colorStop, @endColor);
-		background-repeat: no-repeat;
-		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor)));
-	}
+  .vertical(@startColor, @endColor) {
+    background-image: -moz-linear-gradient(to bottom, @startColor, @endColor);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor));
+    background-image: -webkit-linear-gradient(to bottom, @startColor, @endColor);
+    background-image: -o-linear-gradient(to bottom, @startColor, @endColor);
+    background-image: linear-gradient(to bottom, @startColor, @endColor);
+    background-repeat: repeat-x;
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor)));
+  }
+  .vertical-three-colors(@startColor, @midColor, @colorStop, @endColor) {
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), color-stop(@colorStop, @midColor), to(@endColor));
+    background-image: -webkit-linear-gradient(@startColor, @midColor @colorStop, @endColor);
+    background-image: -moz-linear-gradient(to bottom, @startColor, @midColor @colorStop, @endColor);
+    background-image: -o-linear-gradient(@startColor, @midColor @colorStop, @endColor);
+    background-image: linear-gradient(@startColor, @midColor @colorStop, @endColor);
+    background-repeat: no-repeat;
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor)));
+  }
 }
 // import roboto styles
 @import 'roboto.less';
